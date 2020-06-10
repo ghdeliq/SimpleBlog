@@ -1,0 +1,93 @@
+CREATE DATABASE blog;
+
+use blog;
+
+CREATE TABLE USER(user_id INT(10) PRIMARY KEY AUTO_INCREMENT,
+		user_name VARCHAR(20) NOT NULL,
+		user_password VARCHAR(20) NOT NULL,
+		user_zps INT(10) NOT NULL,
+		user_wzs INT(10) NOT NULL,
+		user_status INT(10) DEFAULT 100) AUTO_INCREMENT=1001;
+
+
+
+
+
+CREATE TABLE photo(photo_id INT(10) PRIMARY KEY AUTO_INCREMENT,
+		user_id INT(10) NOT NULL,
+		photo_name VARCHAR(20),
+		photo_post_time DATE,
+		photo_type_id INT(10),
+		photo_dzs INT(10),
+		photo_context VARCHAR(100)
+		);
+
+
+CREATE TABLE article(article_id INT(10) PRIMARY KEY AUTO_INCREMENT,
+		user_id INT(10),
+		article_title VARCHAR(20),
+		article_context VARCHAR(1000),
+		article_type_id INT(10),
+		article_post_time DATE
+		);
+
+
+
+CREATE TABLE photo_type(photo_type_id INT(10) PRIMARY KEY AUTO_INCREMENT,
+			photo_type_name VARCHAR(50),
+			user_id INT(10)		
+		);
+
+
+
+CREATE TABLE article_type(
+			article_type_id INT(10) PRIMARY KEY AUTO_INCREMENT,
+			article_type_name VARCHAR(20),
+			user_id INT(10)
+			);
+
+
+
+
+CREATE TABLE admin(
+		admin_id INT(10)PRIMARY KEY AUTO_INCREMENT,
+		admin_name VARCHAR(20)NOT NULL,
+		admin_password VARCHAR(20)NOT NULL
+		);
+
+
+
+CREATE TABLE article_gt(
+			article_g_id INT(10) PRIMARY KEY AUTO_INCREMENT,
+			article_g_post_time DATE,
+			article_id INT(10),
+			user_id INT(10),
+			article_g_context VARCHAR(200),
+			user_name VARCHAR(20)
+			);
+
+CREATE TABLE article_type(
+			article_type_id INT(10) PRIMARY KEY AUTO_INCREMENT,
+			article_type_name VARCHAR(20),
+			user_id INT(10)
+)
+
+
+
+
+CREATE TABLE admin(
+		admin_id INT(10)PRIMARY KEY AUTO_INCREMENT,
+		admin_name VARCHAR(20)NOT NULL,
+		admin_password VARCHAR(20)NOT NULL
+)
+
+
+
+CREATE TABLE article_gt(
+			article_g_id INT(10) PRIMARY KEY AUTO_INCREMENT,
+			article_g_post_time DATE,
+			article_id INT(10),
+			user_id INT(10),
+			article_g_context VARCHAR(200),
+			user_name VARCHAR(20)
+)

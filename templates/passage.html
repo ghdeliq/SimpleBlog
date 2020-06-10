@@ -1,0 +1,163 @@
+<!-- 文章列表 -->
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="">
+<meta name="author" content="">
+
+<title>Home</title>
+
+<!-- Bootstrap Core CSS -->
+<link href="{% static 'passage/css/bootstrap.min.css' %}" rel="stylesheet" type="text/css">
+
+<!-- Custom CSS -->
+<link href="{% static 'passage/css/style.css' %}" rel="stylesheet">
+
+<!-- Custom Fonts -->
+<link href="{% static 'passage/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="{% static 'passage/cssdh/style.css' %}">
+
+
+
+<!-- jQuery and Plugin-->
+<script src="{% static 'passage/js/jquery-3.2.1.min.js' %}"></script>
+
+
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+	<script src="js/html5shiv.js"></script>
+	<script src="js/respond.min.js"></script>
+<![endif]-->
+</head>
+<body class="index-page">
+
+
+<div class="wrap-body">
+	<header class="main-header">
+		<nav class="gtco-nav" role="navigation">
+<div class="gtco-container">
+			
+			<div class="row">
+				<div class="col-sm-4 col-xs-12">
+					<div id="gtco-logo"><a href="/shouye/">Blog-P <em></em></a></div>
+				</div>
+				<div class="col-xs-8 text-right menu-1">
+					<ul>
+						<li><a href="/shouye/">首页</a></li>
+						<li><a href="/pp/">个人主页</a></li>
+						<li class="has-dropdown">
+							<a href="/zpq/">照片</a>
+							<!--<ul class="dropdown">
+								<li><a href="#">Web Design</a></li>
+								<li><a href="#">eCommerce</a></li>
+								<li><a href="#">Branding</a></li>
+								<li><a href="#">API</a></li>
+							</ul>-->
+						</li>
+						<li><a href="/passage/">文章</a></li>
+						<li><a href="/pi/">个人信息</a></li>
+						<!--<li> class="btn-cta"><a href="#"><span>Get started</span></a></li>-->
+					</ul>
+				</div>
+			</div>
+			
+		</div>
+	</nav>
+	</header>
+
+
+
+
+	<!-- /Section: intro -->
+	
+
+	<!-- /////////////////////////////////////////Content -->
+
+	{% for aricle in articleList %}
+
+    <div id="page-content">
+		<!-- ////////////Overview Main Nav -->
+		<div class="no-gutter" id="overview-mainnav">
+			<div class="col-sm-5 col-xs-6 nav-item">
+				<a class="nav-item-inner" href="show/wzxq/{{ aricle.article_id }}">
+					<div class="nav-item-image gradient-1" style="background-image: url('{% static 'passage/images/1.jpg' %}')"></div>
+					<h3 class="sub-title">{{ aricle.article_id }} &nbsp;&nbsp;{{ aricle.article_username }}</h3>
+					<div class="nav-item-detail">
+						<h2 class="title"><strong>#</strong> {{ aricle.article_title }}</h2>
+						<p><strong>{{ aricle.article_post_time }}</strong></p>
+					</div>
+				</a>
+			</div>
+			<div class="col-sm-7 col-xs-6 nav-item">
+				<a class="nav-item-inner" href="show/wzxq/{{ aricle.article_id }}">
+					<div class="nav-item-image gradient-2" style="background-image: url('{% static 'passage/images/2.jpg' %}')"></div>
+					<h3 class="sub-title">{{ aricle.article_id }} &nbsp;&nbsp;{{ aricle.article_username }}</h3>
+					<div class="nav-item-detail">
+						<h2 class="title"><strong>#</strong> {{ aricle.article_title }}</h2>
+						<p><strong>{{ aricle.article_post_time }}</strong></p>
+					</div>
+				</a>
+			</div>
+			<div class="col-sm-7 col-xs-6 nav-item">
+				<a class="nav-item-inner" href="show/wzxq/{{ aricle.article_id }}">
+					<div class="nav-item-image gradient-3" style="background-image: url('{% static 'passage/images/3.jpg' %}')"></div>
+					<h3 class="sub-title">{{ aricle.article_id }} &nbsp;&nbsp;{{ aricle.article_username }}</h3>
+					<div class="nav-item-detail">
+						<h2 class="title"><strong>#</strong> {{ aricle.article_title }}</h2>
+						<p><strong>{{ aricle.article_post_time }}</strong></p>
+					</div>
+				</a>
+			</div>
+			<div class="col-sm-5 col-xs-6 nav-item">
+				<a class="nav-item-inner" href="show/wzxq/{{ aricle.article_id }}">
+					<div class="nav-item-image gradient-4" style="background-image: url('{% static 'passage/images/2.jpg' %}')"></div>
+					<h3 class="sub-title">{{ aricle.article_id }} &nbsp;&nbsp;{{ aricle.article_username }}</h3>
+					<div class="nav-item-detail">
+						<h2 class="title"><strong>#</strong> {{ aricle.article_title }}</h2>
+						<p><strong>{{ aricle.article_post_time }}</strong></p>
+					</div>
+				</a>
+			</div>
+{#			<div class="col-sm-5 col-xs-6 nav-item">#}
+{#				<a class="nav-item-inner" href="/wzxq/">#}
+{#					<div class="nav-item-image gradient-5" style="background-image: url('{% static 'passage/images/3.jpg' %}')"></div>#}
+{#					<h3 class="sub-title">05.</h3>#}
+{#					<div class="nav-item-detail">#}
+{#						<h2 class="title"><strong>#</strong> Heading</h2>#}
+{#						<p><strong>Lorem ipsum</strong> dolor sit amet, consectetur adipiscing elit. Aliquam viverra convallis auctor.</p>#}
+{#					</div>#}
+{#				</a>#}
+{#			</div>#}
+{#			<div class="col-sm-7 col-xs-6 nav-item">#}
+{#				<a class="nav-item-inner" href="/wzxq/">#}
+{#					<div class="nav-item-image gradient-6" style="background-image: url('{% static 'passage/images/1.jpg' %}')"></div>#}
+{#					<h3 class="sub-title">06.</h3>#}
+{#					<div class="nav-item-detail">#}
+{#						<h2 class="title"><strong>#</strong> Heading</h2>#}
+{#						<p><strong>Lorem ipsum</strong> dolor sit amet, consectetur adipiscing elit. Aliquam viverra convallis auctor.</p>#}
+{#					</div>#}
+{#				</a>#}
+{#			</div>#}
+		</div>
+	</div>
+   {% endfor %}
+	
+	<!-- /////////////////////////////////////////Footer -->
+	
+	<!-- Footer -->
+	
+</div><!-- .wrap-body -->
+
+<!-- JS -->
+<script src="{% static 'passage/js/main.js' %}"></script>
+<script type="text/javascript" src="{% static 'passage/js/validator.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'passage/js/form-scripts.js' %}"></script>
+
+</body>
+</html>

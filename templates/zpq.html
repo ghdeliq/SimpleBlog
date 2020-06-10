@@ -1,0 +1,241 @@
+<!-- 照片列表 -->
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>照片墙</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Free HTML5 Website Template by sc.chinaz.com" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="sc.chinaz.com" />
+    
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'photo/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'photo/css/open-iconic-bootstrap.min.css' %}">
+    
+    <link rel="stylesheet" href="{% static 'photo/css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'photo/css/owl.theme.default.min.css' %}">
+
+    <link rel="stylesheet" href="{% static 'photo/css/icomoon.css' %}">
+    <link rel="stylesheet" href="{% static 'photo/css/animate.css' %}">
+    <link rel="stylesheet" href="{% static 'photo/css/style.css' %}">
+	<link rel="stylesheet" href="{% static 'photo/csswz/style.css' %}">
+	<link rel="stylesheet" href="{% static 'photo/csswzdh/style.css' %}">
+
+
+  </head>
+  <body>
+<div class="wrap-body">
+	<header class="main-header">
+		<nav class="gtco-nav" role="navigation">
+<div class="gtco-container">
+			
+			<div class="row">
+				<div class="col-sm-4 col-xs-12">
+					<div id="gtco-logo"><a href="index.html"> <em></em></a></div>
+				</div>
+				
+				
+				
+				
+				<div class="col-xs-8 text-right menu-1">
+					<ul>
+						<li><a href="/shouye/">首页</a></li>
+						<li><a href="/pp/">个人主页</a></li>
+						<li class="has-dropdown">
+							<a href="/zpq/">照片</a>
+							<!--<ul class="dropdown">
+								<li><a href="#">Web Design</a></li>
+								<li><a href="#">eCommerce</a></li>
+								<li><a href="#">Branding</a></li>
+								<li><a href="#">API</a></li>
+							</ul>-->
+						</li>
+						<li><a href="/passage/">文章</a></li>
+						<li><a href="/pi/">个人信息</a></li>
+						<!--<li> class="btn-cta"><a href="#"><span>Get started</span></a></li>-->
+					</ul>
+				</div>
+			</div>
+			
+		</div>
+	</nav>
+	</header>
+    
+    <aside class="probootstrap-aside js-probootstrap-aside">
+      <a href="#" class="probootstrap-close-menu js-probootstrap-close-menu d-md-none"><span class="oi oi-arrow-left"></span> Close</a>
+      <div class="probootstrap-site-logo probootstrap-animate" data-animate-effect="fadeInLeft">
+
+        <a href="index.html" class="mb-2 d-block probootstrap-logo">❤ 小心情 ❤</a>
+        <p class="mb-0">    <a href="https://sc.chinaz.com/" target="_blank">   </a></p>
+      </div>
+      <div class="probootstrap-overflow">
+        <nav class="probootstrap-nav">
+          <ul>
+            <li class="probootstrap-animate active" data-animate-effect="fadeInLeft">十年树木，百年树袋熊<br>ლ(╹◡╹ლ)
+<br><br></li>        <!--相册分类，数据库循环输出-->
+            <li class="probootstrap-animate" data-animate-effect="fadeInLeft">❀❀  你好吗 天气好吗~  ❀❀
+<br><br></li>
+            <li class="probootstrap-animate" data-animate-effect="fadeInLeft">我的肩膀好痒，可能在长翅膀  ◔ ‸◔?
+<br><br></li>
+            <li class="probootstrap-animate" data-animate-effect="fadeInLeft">减肥不过是说出来吓唬吓唬一身肉罢了   ʅ（´◔౪◔）ʃ
+<br><br></li>
+            <li class="probootstrap-animate" data-animate-effect="fadeInLeft">要开学了，这样一点都不酷  o(一︿一+)o
+<br><br></li>
+          </ul>
+        </nav>
+
+      </div>
+    </aside>
+
+
+    <main role="main" class="probootstrap-main js-probootstrap-main">
+      <div class="probootstrap-bar">
+        <a href="#" class="probootstrap-toggle js-probootstrap-toggle"><span class="oi oi-menu"></span></a>
+        <div class="probootstrap-main-site-logo"><a href="index.html">Aside</a></div>
+      </div>
+
+    <div class="card-columns">
+      {% for photo in photos %}
+      <form action="/zpxq/" method="post" name="zpxq" >
+
+        <div class="card">
+          <a href="../zpxq/{{ photo.photo_id }}">
+          <img class="card-img-top probootstrap-animate" src="../../{{ photo.photo_p }}" alt="Card image cap">
+          </a>
+        </div>
+{#        <div class="card">#}
+{#          <a href="/zpxq/">#}
+{#            <img class="card-img-top probootstrap-animate" src="{% static 'photo/images/img_2.jpg' %}" alt="Card image cap">#}
+{#          </a>#}
+{#        </div>#}
+{#        <div class="card">#}
+{#          <a href="/zpxq/">#}
+{#            <img class="card-img-top probootstrap-animate" src="{% static 'photo/images/img_3.jpg' %}" alt="Card image cap">#}
+{#          </a>#}
+{#        </div>#}
+{#        <div class="card">#}
+{#          <a href="/zpxq/">#}
+{#            <img class="card-img-top probootstrap-animate" src="{% static 'photo/images/img_4.jpg' %}" alt="Card image cap">#}
+{#          </a>#}
+{#        </div>#}
+{#        <div class="card">#}
+{#          <a href="/zpxq/">#}
+{#            <img class="card-img-top probootstrap-animate" src="{% static 'photo/images/img_5.jpg' %}" alt="Card image cap">#}
+{#          </a>#}
+{#        </div>#}
+{#        <div class="card">#}
+{#          <a href="/zpxq/">#}
+{#            <img class="card-img-top probootstrap-animate" src="{% static 'photo/images/img_6.jpg' %}" alt="Card image cap">#}
+{#          </a>#}
+{#        </div>#}
+{#        <div class="card">#}
+{#          <a href="/zpxq/">#}
+{#            <img class="card-img-top probootstrap-animate" src="{% static 'photo/images/img_7.jpg' %}" alt="Card image cap">#}
+{#          </a>#}
+{#        </div>#}
+{#        <div class="card">#}
+{#          <a href="/zpxq/">#}
+{#            <img class="card-img-top probootstrap-animate" src="{% static 'photo/images/img_8.jpg' %}" alt="Card image cap">#}
+{#          </a>#}
+{#        </div>#}
+{#        <div class="card">#}
+{#          <a href="/zpxq/">#}
+{#            <img class="card-img-top probootstrap-animate" src="{% static 'photo/images/img_9.jpg' %}" alt="Card image cap">#}
+{#          </a>#}
+{#        </div>#}
+{#        <div class="card">#}
+{#          <a href="/zpxq/">#}
+{#            <img class="card-img-top probootstrap-animate" src="{% static 'photo/images/img_10.jpg' %}" alt="Card image cap">#}
+{#          </a>#}
+{#        </div>#}
+{#        <div class="card">#}
+{#          <a href="/zpxq/">#}
+{#            <img class="card-img-top probootstrap-animate" src="{% static 'photo/images/img_11.jpg' %}" alt="Card image cap">#}
+{#          </a>#}
+{#        </div>#}
+{#        <div class="card">#}
+{#          <a href="/zpxq/">#}
+{#            <img class="card-img-top probootstrap-animate" src="{% static 'photo/images/img_12.jpg' %}" alt="Card image cap">#}
+{#          </a>#}
+{#        </div>#}
+{#        <div class="card">#}
+{#          <a href="/zpxq/">#}
+{#            <img class="card-img-top probootstrap-animate" src="{% static 'photo/images/img_13.jpg' %}" alt="Card image cap">#}
+{#          </a>#}
+{#        </div>#}
+{#        <div class="card">#}
+{#          <a href="/zpxq/">#}
+{#            <img class="card-img-top probootstrap-animate" src="{% static 'photo/images/img_14.jpg' %}" alt="Card image cap">#}
+{#          </a>#}
+{#        </div>#}
+{#        <div class="card">#}
+{#          <a href="/zpxq/">#}
+{#            <img class="card-img-top probootstrap-animate" src="{% static 'photo/images/img_15.jpg' %}" alt="Card image cap">#}
+{#          </a>#}
+{#        </div>#}
+{#        <div class="card">#}
+{#          <a href="/zpxq/">#}
+{#            <img class="card-img-top probootstrap-animate" src="{% static 'photo/images/img_16.jpg' %}" alt="Card image cap">#}
+{#          </a>#}
+{#        </div>#}
+{#        <div class="card">#}
+{#          <a href="/zpxq/">#}
+{#            <img class="card-img-top probootstrap-animate" src="{% static 'photo/images/img_17.jpg' %}" alt="Card image cap">#}
+{#          </a>#}
+{#        </div>#}
+{#        <div class="card">#}
+{#          <a href="/zpxq/">#}
+{#            <img class="card-img-top probootstrap-animate" src="{% static 'photo/images/img_18.jpg' %}" alt="Card image cap">#}
+{#          </a>#}
+{#        </div>#}
+{#        <div class="card">#}
+{#          <a href="/zpxq/">#}
+{#            <img class="card-img-top probootstrap-animate" src="{% static 'photo/images/img_19.jpg' %}" alt="Card image cap">#}
+{#          </a>#}
+{#        </div>#}
+{#        <div class="card">#}
+{#          <a href="/zpxq/">#}
+{#            <img class="card-img-top probootstrap-animate" src="{% static 'photo/images/img_20.jpg' %}" alt="Card image cap">#}
+{#          </a>#}
+{#        </div>#}
+{#        <div class="card">#}
+{#          <a href="/zpxq/">#}
+{#            <img class="card-img-top probootstrap-animate" src="{% static 'photo/images/img_21.jpg' %}" alt="Card image cap">#}
+{#          </a>#}
+{#        </div>#}
+
+          </form>
+        {% endfor %}
+    </div>
+
+      <div class="container-fluid d-md-none">
+        <div class="row">
+          <div class="col-md-12">
+            <ul class="list-unstyled d-flex probootstrap-aside-social">
+              <li><a href="#" class="p-2"><span class="icon-twitter"></span></a></li>
+              <li><a href="#" class="p-2"><span class="icon-instagram"></span></a></li>
+              <li><a href="#" class="p-2"><span class="icon-dribbble"></span></a></li>
+            </ul>
+            <p>Copyright &copy; 2018.Company name All rights reserved.<a target="_blank" href="http://sc.chinaz.com/moban/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a></p>
+          </div>
+        </div>
+      </div>
+
+    </main>
+
+    
+
+    <script src="{% static 'photo/js/jquery-3.2.1.slim.min.js' %}"></script>
+    <script src="{% static 'photo/js/popper.min.js' %}"></script>
+    <script src="{% static 'photo/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'photo/js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'photo/js/jquery.waypoints.min.js' %}"></script>
+    <script src="{% static 'photo/js/imagesloaded.pkgd.min.js' %}"></script>
+
+    <script src="{% static 'photo/js/main.js' %}"></script>
+    
+  </body>
+</html>

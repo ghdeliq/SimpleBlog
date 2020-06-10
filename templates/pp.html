@@ -1,0 +1,129 @@
+﻿<!-- 个人主页 -->
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>个人主页</title>
+<link href="{% static 'ppage/css/style.css' %}" rel="stylesheet" type="text/css">
+<link href="{% static 'ppage/css/bootstrap.css' %}" rel="stylesheet" type="text/css">
+<link href="{% static 'ppage/css/media.css' %}" rel="stylesheet" type="text/css">
+<link href="{% static 'ppage/css/jquery.fancybox.css' %}" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="font-awesome/4.6.1/css/font-awesome.min.css">
+<link href="{% static 'ppage/css/owl.carousel.css' %}" rel="stylesheet" type="text/css">
+<link href="{% static 'ppage/css/owl.theme.css' %}" rel="stylesheet" type="text/css">
+<link href="{% static 'ppage/css/animate.css' %}" rel="stylesheet" type="text/css">
+<link href="{% static 'ppage/css/jpushmenu.css' %}" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="{% static 'ppage/csspp/style.css' %}">
+</head>
+<body class="push-body">
+
+	<nav class="gtco-nav" role="navigation">
+<div class="gtco-container">
+			
+			<div class="row">
+				<div class="col-sm-4 col-xs-12">
+					<div id="gtco-logo"><a href="/shouye/">Blog-P <em></em></a></div>
+				</div>
+				<div class="col-xs-8 text-right menu-1">
+					<ul>
+						<li><a href="/shouye/">首页</a></li>
+						<li><a href="/pp/">个人主页</a></li>
+						<li class="has-dropdown">
+							<a href="/zpq/">照片</a>
+							<!--<ul class="dropdown">
+								<li><a href="#">Web Design</a></li>
+								<li><a href="#">eCommerce</a></li>
+								<li><a href="#">Branding</a></li>
+								<li><a href="#">API</a></li>
+							</ul>-->
+						</li>
+						<li><a href="/passage/">文章</a></li>
+						<li><a href="/pi/">个人信息</a></li>
+						<!--<li> class="btn-cta"><a href="#"><span>Get started</span></a></li>-->
+					</ul>
+				</div>
+			</div>
+			
+		</div>
+	</nav>
+
+<!-- Info-->
+<div id="home" class="row section">
+  <div class="container info text-center">
+    <div class="row">
+      <div class="col-xs-12 text-center">
+        <div class="info_detail">
+          <div class="zoom"><img src="{% static 'ppage/images/alex.jpg' %}" alt="alex">
+            <div class="zoom-overlay"></div>
+          </div>
+		  <br>
+		  <br>
+		  <br>
+          <h3>{{ userInfo.user_name }}</h3>
+         
+          <!-- Social Icons -->
+        
+        </div>
+      </div>
+    </div> 
+    <div class="button">  <a href="/zpq/" data-target="contactme" class="btn active">查看图片</a> <a href="../../enter_article/wzfb/qbj/" data-target="mywork" class="btn">发表文章</a> </div>
+  </div>
+</div>
+
+<!-- About -->
+
+
+<!-- Work -->
+
+<div id="mywork" class="row section">
+  <div class="container-fluid work text-center">
+    <div class="row">
+      <div class="col-xs-12 text-center">
+        <div class="animate fadeInRight">
+          <div class="head">
+            <h1>我 的 动 态</h1>
+          </div>
+        </div>
+        <div class="col-xs-12 work_filter text-center">
+          <div class="row">
+            <div class="gallery">
+              <div class="row">
+			  
+			 <!--**********************************************循环体***************************************************-->
+               {% for article in perArticleList %}
+                <div class="mix web">
+                  <div class="mix_sec">
+                    <div class="imageContainer">{{ article.article_title }} <a class="overlayText fancybox" href="{ photos['photo_p'] }" data-fancybox-group="gallery">
+                      <h4> {{ article.article_title }} </h4>
+                      <p>{{ article.article_context }}</p>
+                      </a> 
+					</div>
+                  </div>
+                </div>
+               {% endfor %}
+		    <!--**********************************************循环体***************************************************-->
+              </div>
+            </div>
+			
+          </div>
+        </div>
+       
+<a href="#." class="cd-top">TOP</a> 
+<!--JS File--> 
+
+<script type="text/javascript" src="{% static 'ppage/js/jquery-2.2.3.js' %}"></script>
+<script type="text/javascript" src="{% static 'ppage/js/bootstrap.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'ppage/js/jquery.circliful.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'ppage/js/jquery.mixitup.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'ppage/js/jquery.fancybox.js' %}"></script>
+<script type="text/javascript" src="{% static 'ppage/js/waypoints.js' %}"></script>
+<script type="text/javascript" src="{% static 'ppage/js/jquery.appear.js' %}"></script>
+<script type="text/javascript" src="{% static 'ppage/js/jpushmenu.js' %}"></script>
+<script type="text/javascript" src="{% static 'ppage/js/owl.carousel.js' %}"></script>
+<script type="text/javascript" src="{% static 'ppage/js/functions.js' %}"></script>
+</body>
+</html>
+

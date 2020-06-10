@@ -1,0 +1,111 @@
+<!-- 照片详情 -->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>照片详情</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Free HTML5 Website Template by sc.chinaz.com" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="sc.chinaz.com" />
+    
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'photo/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'photo/css/open-iconic-bootstrap.min.css' %}">
+    
+    <link rel="stylesheet" href="{% static 'photo/css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'photo/css/owl.theme.default.min.css' %}">
+
+    <link rel="stylesheet" href="{% static 'photo/css/icomoon.css' %}">
+    <link rel="stylesheet" href="{% static 'photo/css/animate.css' %}">
+    <link rel="stylesheet" href="{% static 'photo/css/style.css' %}">
+
+  </head>
+  <body>
+    
+{#    <aside class="probootstrap-aside js-probootstrap-aside">#}
+{#      <a href="#" class="probootstrap-close-menu js-probootstrap-close-menu d-md-none"><span class="oi oi-arrow-left"></span> Close</a>#}
+{#      <div class="probootstrap-site-logo probootstrap-animate" data-animate-effect="fadeInLeft">#}
+{#        #}
+{#        <a href="index.html" class="mb-2 d-block probootstrap-logo">相册</a>#}
+{#        <p class="mb-0">  <a href="https://sc.chinaz.com/" target="_blank">   </a></p>#}
+{#      </div>#}
+{#      <div class="probootstrap-overflow">#}
+{#        <nav class="probootstrap-nav">#}
+{#          <ul>#}
+{#            <li class="probootstrap-animate" data-animate-effect="fadeInLeft"><a href="index.html">分类</a></li>#}
+{#            <li class="probootstrap-animate" data-animate-effect="fadeInLeft"><a href="about.html">分类</a></li>#}
+{#            <li class="probootstrap-animate" data-animate-effect="fadeInLeft"><a href="services.html">分类</a></li>#}
+{#            <li class="probootstrap-animate active" data-animate-effect="fadeInLeft"><a href="portfolio.html">分类</a></li>#}
+{#            <li class="probootstrap-animate" data-animate-effect="fadeInLeft"><a href="contact.html">分类</a></li>#}
+{#          </ul>#}
+{#        </nav>#}
+{#       #}
+{#      </div>#}
+{#    </aside>#}
+
+
+    <main role="main" class="probootstrap-main js-probootstrap-main">
+      <div class="probootstrap-bar">
+        <a href="#" class="probootstrap-toggle js-probootstrap-toggle"><span class="oi oi-menu"></span></a>
+        <div class="probootstrap-main-site-logo"><a href="index.html">Aside</a></a></div>
+      </div>
+      <div class="container-fluid">
+        <div class="row justify-content-center">
+          <div class="col-xl-8 col-lg-12">
+            <p class="mb-5"><img src="../../{{ photo.photo_p }}" class="img-fluid"></p>
+
+            <div class="row">
+              <div class="col-xl-8 col-lg-12 mx-auto">
+                <p>照片编号：{{ photo.photo_id }}</p>
+				<p>照片名称：{{ photo.photo_name }}</p>
+                <p>照片详情：{{ photo.photo_context }}</p>
+				<p>发布时间：{{ photo.photo_post_time }}</p>
+{#				<a href="/zpq/"><p align="right"><font color="#666666" size="+1"><input type="submit" value="删除图片" name="shanchu" /></font></p></a>#}
+              </div>
+            </div>
+            
+          </div>
+        </div>
+        <!-- END row -->
+
+  
+        <!-- END section -->
+
+      </div>
+
+      <div class="container-fluid d-md-none">
+        <div class="row">
+          <div class="col-md-12">
+            <ul class="list-unstyled d-flex probootstrap-aside-social">
+              <li><a href="#" class="p-2"><span class="icon-twitter"></span></a></li>
+              <li><a href="#" class="p-2"><span class="icon-instagram"></span></a></li>
+              <li><a href="#" class="p-2"><span class="icon-dribbble"></span></a></li>
+            </ul>
+            <p><a target="_blank" href="http://sc.chinaz.com/moban/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a></p>
+          </div>
+        </div>
+      </div>
+
+    </main>
+
+    
+
+    <script src="{% static 'photo/js/jquery-3.2.1.slim.min.js' %}"></script>
+    <script src="{% static 'photo/js/popper.min.js' %}"></script>
+    <script src="{% static 'photo/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'photo/js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'photo/js/jquery.waypoints.min.js' %}"></script>
+    <script src="{% static 'photo/js/imagesloaded.pkgd.min.js' %}"></script>
+
+    <script src="{% static 'photo/js/main.js' %}"></script>
+	
+	
+	
+	
+	
+    
+  </body>
+</html>

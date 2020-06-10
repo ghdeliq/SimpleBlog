@@ -1,0 +1,73 @@
+<!-- 文章详情 -->
+{% load static %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>文章详情</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet" />
+<link href="{% static 'passageinfo/default.css' %}" rel="stylesheet" type="text/css" media="all" />
+<link href="{% static 'passageinfo/fonts.css' %}" rel="stylesheet" type="text/css" media="all" />
+<link rel="stylesheet" href="{% static 'passageinfo/cssdh/style.css' %}">
+<link rel="stylesheet" href="{% static 'passageinfo/csswzdh/style.css' %}">
+<!--[if IE 6]><link href="default_ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
+
+</head>
+<body>
+ 	<header class="main-header">
+		<nav class="gtco-nav" role="navigation">
+<div class="gtco-container">
+			
+			<div class="row">
+				<!--<div class="col-sm-4 col-xs-12">
+					<div id="gtco-logo"><a href="index.html">Blog-P <em></em></a></div>
+				</div>   -->
+				<div class="col-xs-8 text-right menu-1">
+					<ul>
+						<li><a href="/shouye/">首页</a></li>
+						<li><a href="/pp/">个人主页</a></li>
+						<li class="has-dropdown">
+							<a href="/zpq/">照片</a>
+							<!--<ul class="dropdown">
+								<li><a href="#">Web Design</a></li>
+								<li><a href="#">eCommerce</a></li>
+								<li><a href="#">Branding</a></li>
+								<li><a href="#">API</a></li>
+							</ul>-->
+						</li>
+						<li><a href="/passage/">文章</a></li>
+						<li><a href="/pi/">个人信息</a></li>
+						<!--<li> class="btn-cta"><a href="#"><span>Get started</span></a></li>-->
+					</ul>
+				</div>
+			</div>
+			
+		</div>
+	</nav>
+	</header>
+
+<div id="page" class="container">
+
+	
+		
+		<div id="welcome">
+			<div class="title">
+				<center><h2>{{ article.article_title }}</h2><br></center>
+{#				<center><span class="byline">作者</span><br></center>#}
+				<center><span class="byline">{{ article.article_post_time }}</span></center><br>
+                <center><span class="byline">{{ article.user_name }}</span></center>
+			</div>
+			<p>{{ article.article_context }}</p>
+			
+			<br><br><br><br>
+			
+{#            <p><center><a href="/passage/" ><input type="submit" value="删除" name="submit"/></a>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="/passage/" ><input type="button" value="返回" name="fanhui"></a></center></p>#}
+			
+		
+	
+</div>
+<div style="display:none"><script src='http://v7.cnzz.com/stat.php?id=155540&web_id=155540' language='JavaScript' charset='gb2312'></script></div>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!-- 首页 杂乱 -->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>首页</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    
+    <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'shouye/css/styles-merged.css' %}">
+    <link rel="stylesheet" href="{% static 'shouye/css/style.min.css' %}">
+    <link rel="stylesheet" href="{% static 'shouye/css/custom.css' %}">
+	
+	<link rel="stylesheet" href="{% static 'shouye/cssdh/style.css' %}">
+
+    <!--[if lt IE 9]>
+      <script src="js/vendor/html5shiv.min.js"></script>
+      <script src="js/vendor/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+  <!-- START: header -->
+  
+  <!--------------------------------------------导航------------------------------------------------------->
+  <nav class="gtco-nav" role="navigation">
+<div class="gtco-container">
+			
+			<div class="row">
+				<div class="col-sm-4 col-xs-12">
+					<div id="gtco-logo"><a href="/shouye/">Blog-P <em></em></a></div>
+				</div>
+				<div class="col-xs-8 text-right menu-1">
+					<ul>
+						<li><a href="/enter_article/">首页</a></li>
+						<li><a href="/pp/">个人主页f</a></li>
+						<li class="has-dropdown">
+							<a href="/zpq/">照片</a>
+							<!--<ul class="dropdown">
+								<li><a href="#">Web Design</a></li>
+								<li><a href="#">eCommerce</a></li>
+								<li><a href="#">Branding</a></li>
+								<li><a href="#">API</a></li>
+							</ul>-->
+						</li>
+						<li><a href="/passage/">文章</a></li>
+						<li><a href="/pi/">个人信息</a></li>
+						<!--<li> class="btn-cta"><a href="#"><span>Get started</span></a></li>-->
+					</ul>
+				</div>
+			</div>
+			
+		</div>
+	</nav>
+   <!--------------------------------------------导航------------------------------------------------------->
+  
+  <div class="probootstrap-loader"></div>
+
+
+  <!-- END: header -->
+  
+  <div class="probootstrap-section">
+    <div class="container text-center">
+   
+
+      <div class="row probootstrap-gutter16">
+	  
+	  <!--################################################################循环体部分#################################################-->
+	  
+	    {% for qbLists in qbList %}
+        <div class="col-md-4 probootstrap-animate" data-animate-effect="fadeIn">
+{#          <a href="single-page.html" class="img-bg" style="background-image: url({% static 'shouye/img/img_1.jpg' %});">#}
+            <a href="single-page.html" class="img-bg" style="background-image: url({{ qbLists.photo_p }});">
+            <div class="probootstrap-photo-details">
+              <h2>{{ qbLists.photo_name }}</h2>
+              <p>{{ qbLists.photo_post_time }}</p>
+            </div>
+        {% endfor %}
+          </a>
+        </div>
+		
+       <!--################################################################循环体部分#################################################-->
+	    
+      </div>
+
+    </div>
+  </div>
+
+
+
+  <div class="gototop js-top">
+    <a href="#" class="js-gotop"><i class="icon-chevron-thin-up"></i></a>
+  </div>
+  
+
+  <script src="{% static 'shouye/js/scripts.min.js' %}"></script>
+  <script src="{% static 'shouye/js/main.min.js' %}"></script>
+  <script src="{% static 'shouye/js/custom.js' %}"></script>
+
+  </body>
+</html>
